@@ -1,0 +1,26 @@
+# 运行时依赖（Python 3.13 实测通过）
+PySide6==6.12.0
+ctranslate2==4.9.0
+sentencepiece==0.2.3
+numpy>=2.1
+pillow>=11
+mss>=10
+wordninja==2.0.0
+
+# Windows 系统 OCR（默认取词引擎，零模型体积、10 万张图都不用下模型）
+winrt-runtime==4.1.0
+winrt-Windows.Media.Ocr==10.0.28000.2957
+winrt-Windows.Graphics.Imaging==10.0.28000.2957
+winrt-Windows.Storage.Streams==10.0.28000.2957
+winrt-Windows.Foundation==10.0.28000.2957
+winrt-Windows.Foundation.Collections==10.0.28000.2957
+winrt-Windows.Globalization==10.0.28000.2957
+
+# 兜底取词引擎（系统 OCR 不可用时才用到，可选）
+rapidocr-onnxruntime==1.2.3
+onnxruntime==1.32.0
+shapely
+pyclipper
+
+# 只在打包时用到
+pyinstaller>=6.11

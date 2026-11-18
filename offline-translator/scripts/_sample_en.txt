@@ -1,0 +1,3 @@
+Machine translation systems have improved a lot over the past few years,
+and small offline models are now good enough for everyday reading.
+This means you can read English pages even without a network.

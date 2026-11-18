@@ -1,0 +1,44 @@
+{
+  "hotkey": {
+    "capture": "Alt+T",
+    "clipboard": "Ctrl+Alt+C"
+  },
+  "ball": {
+    "shape": "ball",
+    "pos": [
+      40,
+      320
+    ],
+    "size": 56,
+    "opacity": 0.94,
+    "edge_snap": true
+  },
+  "popup": {
+    "font_size": 16,
+    "max_width": 520,
+    "theme": "light",
+    "auto_copy": false,
+    "close_on_esc": true
+  },
+  "clipboard": {
+    "auto_translate": false,
+    "min_chars": 2,
+    "debounce_ms": 400
+  },
+  "engine": {
+    "device": "cpu",
+    "compute_type": "int8",
+    "beam_size": 3,
+    "max_chars": 1200
+  },
+  "ocr": {
+    "backend": "auto"
+  },
+  "line_merge": {
+    "enabled": true,
+    "line_gap_ratio": 1.45
+  },
+  "startup": {
+    "autostart": false
+  }
+}
