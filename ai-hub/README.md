@@ -2,6 +2,37 @@
 
 一个跑在自己电脑上的「多模型聚合客户端」：左侧是各家的官方软件图标，点一下 → 填官方 API Key → 就在同一个界面里聊天，还能让多个模型同时上、再汇总成结论。
 
+## 界面
+
+<table>
+  <tr>
+    <td width="50%"><img src="screenshots/01-overview.png" alt="首页：7 个模型一个界面"></td>
+    <td width="50%"><img src="screenshots/02-multi-model.png" alt="多模型协同：并行对比后汇总"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>首页 · 7 个大模型装进一个界面</b><br>点模型 → 填自己的 Key → 立刻开聊</td>
+    <td align="center"><b>多模型协同 · 同时问、再统一给结论</b><br>一个提问并行发给多个模型，一键汇总共识与分歧</td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="screenshots/03-workflow.png" alt="工作流：多个模型接力干活"></td>
+    <td width="50%"><img src="screenshots/04-imagegen.png" alt="生图模式"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>工作流 · 多个模型接力干活</b><br>写初稿 → 挑问题 → 改定稿，上一步产出自动喂给下一步</td>
+    <td align="center"><b>生图模式</b><br>一句描述出图，支持五档尺寸与基于原图再改</td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="screenshots/05-settings-keys.png" alt="设置：模型与 API Key"></td>
+    <td width="50%"><img src="screenshots/06-settings-voice.png" alt="设置：语音与工具"></td>
+  </tr>
+  <tr>
+    <td align="center"><b>设置 · 模型与 API Key</b><br>每家独立填地址与模型名，自带官方申请入口和「测试连接」</td>
+    <td align="center"><b>设置 · 语音与工具</b><br>第三方语音识别边说边出字、朗读音色、搜索来源、导出主题</td>
+  </tr>
+</table>
+
+> 截图取自程序真实运行状态（首次安装、还没填 Key 的样子），不含任何真实密钥或聊天记录。
+
 ## 怎么启动
 
 有两种用法，任选一种。
