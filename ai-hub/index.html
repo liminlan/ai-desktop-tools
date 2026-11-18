@@ -468,7 +468,7 @@ const PRESET_PROVIDERS = [
     id:'deepseek', name:'DeepSeek', brand:'杭州深度求索',
     icon:'assets/icons/store_deepseek.png', iconFit:'cover', color:'#4d6bfe',
     base:'https://api.deepseek.com/chat/completions',
-    model:'deepseek-chat', models:['deepseek-chat','deepseek-reasoner'],
+    model:'deepseek-flash', models:['deepseek-flash','deepseek-v4-pro'],
     keyUrl:'https://platform.deepseek.com/api_keys', keyName:'API Key'
   },
   {
@@ -558,7 +558,18 @@ let params           = Object.assign({temp:0.7, maxTokens:0, ctxTurns:8, tools:f
 params.asr = Object.assign({engine:'browser', base:'', key:'', model:'FunAudioLLM/SenseVoiceSmall', lang:'zh'}, params.asr || {});
 let stats            = Object.assign({calls:0, chars:0, imgs:0}, load(K.stats, {}));
 
+// 厂商模型改名的兼容表：旧名 → 新名（老用户已保存的配置会被自动纠正）
+const MODEL_ALIAS = {
+  deepseek: {'deepseek-chat':'deepseek-flash', 'deepseek-reasoner':'deepseek-v4-pro'}
+};
+
 function allProviders(){
+  let dirty = false;
+  Object.keys(MODEL_ALIAS).forEach(pid => {
+    const s = storedProviders[pid], map = MODEL_ALIAS[pid];
+    if(s && s.model && map[s.model]){ s.model = map[s.model]; dirty = true; }
+  });
+  if(dirty) save(K.prov, storedProviders);
   const list = PRESET_PROVIDERS.map(p => {
     const s = storedProviders[p.id] || {};
     return {...p, apiKey:s.apiKey||'', base:s.base||p.base, model:s.model||p.model||''};
